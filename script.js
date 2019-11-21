@@ -16,7 +16,7 @@ axios.get('https://api.airtable.com/v0/applgpGFRXcIF7ORT/Data?api_key=key1Wb5cOe
             let exchanged = document.createElement("p");
             exchanged.innerHTML = `為了換得 ${raw_records[i].fields['Exchange Object']} ，`;
             let reason = document.createElement("p");
-            exchanged.innerHTML = `因為 ${raw_records[i].fields['Reason']} 。`;
+            reason.innerHTML = `因為 ${raw_records[i].fields['Reason']} 。`;
             ticket.appendChild(name);
             ticket.appendChild(dropped);
             ticket.appendChild(exchanged);
