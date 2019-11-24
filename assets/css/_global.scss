@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+TC:500,700&display=swap');
+
+* {
+  margin: 0;
+  &:focus {
+    outline: none;
+  }
+}
+
+html, body {
+  //height: 100%;
+  font-family: 'Noto Serif TC', serif;
+  font-size: 16px;
+  color: $text-black;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+h2 {
+  font-size: 3.25rem;
+  line-height: 4.5rem;
+}
+
+h3 {
+  font-size: 2.75rem;
+  line-height: 3.75rem;
+}
+
+p {
+  font-size: 1.5rem;
+  line-height: 3rem;
+}
+
+a {
+  display: inline-block;
+  vertical-align: top;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+a:focus, button:focus, button.active:focus, .button:focus, .button.active:focus {
+  outline: 0;
+  outline-color: transparent;
+  text-decoration: none;
+}

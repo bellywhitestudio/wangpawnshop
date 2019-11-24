@@ -1,0 +1,20 @@
+{
+  "name": "wangpawnshop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "assets/js/main.js",
+  "scripts": {
+    "watch-css": "cd assets/css && sass --watch main.scss:main.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bellywhitestudio/wangpawnshop.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bellywhitestudio/wangpawnshop/issues"
+  },
+  "homepage": "https://github.com/bellywhitestudio/wangpawnshop#readme"
+}

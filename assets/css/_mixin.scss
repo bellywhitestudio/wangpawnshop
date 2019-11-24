@@ -1,0 +1,13 @@
+@mixin cross-browser($key, $value...) {
+  -ms-#{$key}: $value; /* IE 9 */
+  -webkit-#{$key}: $value; /* Safari */
+  -moz-#{$key}: $value; /* Safari */
+  -o-#{$key}: $value; /* Opera */
+  #{$key}: $value;
+}
+
+@mixin rwd($device) {
+  @media screen and (max-width: #{$device}) {
+    @content;
+  }
+}
