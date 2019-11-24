@@ -45,15 +45,22 @@
                         <div class="right">
                             <h3>當票集錦</h3>
                             <div class="slider-wrapper">
-                                <img src="./assets/img/ticket.svg" alt="">
+                                <div class="ticket-wrapper">
+                                    <img src="./assets/img/ticket.svg" alt="">
+                                    <div class="content">
+                                        <div class="line"><span class="label">我願意拿出</span><span class="text" id="dropped"></span></div>
+                                        <div class="line"><span class="label">為了換得</span><span class="text" id="exchanged"></span></div>
+                                        <div class="line"><span class="label">因為</span><span class="text" id="reason"></span></div>
+                                    </div>
+                                </div>
                                 <div class="buttons-wrapper">
-                                    <a class="button" href="">
+                                    <a class="button" id="button-prev-ticket">
                                         <p>上一張</p>
                                     </a>
                                     <a class="button" href="">
                                         <p>抽一張</p>
                                     </a>
-                                    <a class="button" href="">
+                                    <a class="button" id="button-next-ticket">
                                         <p>下一張</p>
                                     </a>
                                 </div>

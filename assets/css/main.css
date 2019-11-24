@@ -1095,8 +1095,37 @@ section.tickets {
   section.tickets .right .slider-wrapper {
     margin: 0 auto;
     max-width: 41rem; }
-    section.tickets .right .slider-wrapper img {
+    section.tickets .right .slider-wrapper .ticket-wrapper {
+      position: relative;
       margin: 0 0 3.375rem; }
+      section.tickets .right .slider-wrapper .ticket-wrapper .content {
+        position: absolute;
+        left: 50%;
+        top: 30%;
+        width: 70%;
+        transform: translateX(-50%); }
+        section.tickets .right .slider-wrapper .ticket-wrapper .content .line {
+          display: flex;
+          margin: 2rem 0 0;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden; }
+          section.tickets .right .slider-wrapper .ticket-wrapper .content .line .label {
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: 2rem;
+            white-space: nowrap; }
+          section.tickets .right .slider-wrapper .ticket-wrapper .content .line .text {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            margin-left: 4px;
+            border-bottom: solid 1px #4d4d4d;
+            flex-grow: 1;
+            font-size: 1.5rem;
+            line-height: 2rem;
+            text-align: center;
+            color: #aa8258; }
     section.tickets .right .slider-wrapper .buttons-wrapper {
       padding: 1rem 0 0;
       display: flex;
@@ -1105,7 +1134,8 @@ section.tickets {
         width: 7rem;
         height: 3.125rem;
         text-align: center;
-        background-color: #999999; }
+        background-color: #999999;
+        cursor: pointer; }
         section.tickets .right .slider-wrapper .buttons-wrapper .button p {
           color: #ffffff;
           line-height: 3.125rem; }

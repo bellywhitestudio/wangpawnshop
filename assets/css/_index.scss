@@ -64,8 +64,41 @@ section.tickets {
     .slider-wrapper {
       margin: 0 auto;
       max-width: 41rem;
-      img {
+      .ticket-wrapper {
+        position: relative;
         margin: 0 0 3.375rem;
+        .content {
+          position: absolute;
+          left: 50%;
+          top: 30%;
+          width: 70%;
+          transform: translateX(-50%);
+          .line {
+            display: flex;
+            margin: 2rem 0 0;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            .label {
+              font-size: 2rem;
+              font-weight: 700;
+              line-height: 2rem;
+              white-space: nowrap;
+            }
+            .text {
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              overflow: hidden;
+              margin-left: 4px;
+              border-bottom: solid 1px $text-black;
+              flex-grow: 1;
+              font-size: 1.5rem;
+              line-height: 2rem;
+              text-align: center;
+              color: $brown;
+            }
+          }
+        }
       }
       .buttons-wrapper {
         padding: 1rem 0 0;
@@ -76,6 +109,7 @@ section.tickets {
           height: 3.125rem;
           text-align: center;
           background-color: $dark-40;
+          cursor: pointer;
           p {
             color: $white;
             line-height: 3.125rem;
