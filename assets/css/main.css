@@ -1066,8 +1066,17 @@ section.top-banner {
   section.top-banner .arrow {
     width: 38.5px;
     display: block;
-    margin: 5rem auto 0; }
+    margin: 5rem auto 0;
+    cursor: pointer;
+    animation: floating 1.5s ease infinite; }
 
+@keyframes floating {
+  0% {
+    transform: translateY(0); }
+  50% {
+    transform: translateY(10px); }
+  100% {
+    transform: translateY(0); } }
 section.tickets {
   padding: 5rem 0; }
   section.tickets .left h3 {

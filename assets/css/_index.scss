@@ -23,8 +23,21 @@ section.top-banner {
   .arrow {
     width: 38.5px;
     display: block;
-    //vertical-align: top;
     margin: 5rem auto 0;
+    cursor: pointer;
+    animation: floating 1.5s ease infinite;
+  }
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
 
@@ -131,9 +144,6 @@ section.about-us {
   .organization {
     font-size: 0;
     margin: 0 0 8.75rem;
-    //&:last-child {
-    //  margin: 0;
-    //}
 
     .slogan-wrapper, .logo-wrapper, .description, .social-icons {
       display: inline-block;
