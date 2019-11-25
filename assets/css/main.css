@@ -1048,7 +1048,8 @@ a:focus, button:focus, button.active:focus, .button:focus, .button.active:focus 
   text-decoration: none; }
 
 .page-content {
-  background-color: #f2f2f2; }
+  background-color: #f2f2f2;
+  overflow: hidden; }
 
 section.top-banner {
   padding: 5rem 0; }
@@ -1096,14 +1097,14 @@ section.top-banner {
           display: inline-block;
           vertical-align: top;
           width: 15%;
-          height: calc(55vh - 5rem);
+          height: calc(55vh - 6rem);
           position: relative; }
           section.top-banner .content .text-wrapper h2 {
             max-height: 18rem;
             width: 100%;
             height: 100%;
             padding: 0;
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: 500;
             line-height: 100%;
             justify-content: space-between;
@@ -1114,7 +1115,7 @@ section.top-banner {
       section.top-banner .arrow {
         width: initial;
         height: 2rem;
-        margin: 3rem auto 0; } }
+        margin: 3rem auto 1rem; } }
 
 @keyframes floating {
   0% {
@@ -1125,6 +1126,9 @@ section.top-banner {
     transform: translateY(0); } }
 section.tickets {
   padding: 5rem 0; }
+  @media screen and (max-width: 767px) {
+    section.tickets {
+      padding: 4rem 0; } }
   section.tickets .left h3 {
     max-width: 428px;
     padding: 2rem 0;
@@ -1136,7 +1140,7 @@ section.tickets {
     max-width: 428px; }
   @media screen and (max-width: 1200px) {
     section.tickets .left {
-      margin: 0 0 20rem; }
+      margin: 0 0 14rem; }
       section.tickets .left h3 {
         margin: 3.5rem auto;
         text-align: center; }
@@ -1331,7 +1335,6 @@ section.about-us {
       padding: 5rem 0 0; }
       section.about-us h3 {
         text-align: center;
-        margin: 0 0 9rem;
         font-size: 1.875rem;
         line-height: 2.5rem; }
       section.about-us .organization {
@@ -1341,7 +1344,7 @@ section.about-us {
           width: 100%; }
         section.about-us .organization .slogan-wrapper {
           text-align: center;
-          margin: 0 0 3rem; }
+          margin: 0 0 2rem; }
           section.about-us .organization .slogan-wrapper p {
             display: inline-block;
             vertical-align: top;
@@ -1351,14 +1354,14 @@ section.about-us {
             letter-spacing: 2.1px; }
         section.about-us .organization .logo-wrapper {
           padding: 0;
-          margin: 0 0 2.75rem;
+          margin: 0 0 2.5rem;
           text-align: center; }
           section.about-us .organization .logo-wrapper img {
             max-height: initial;
             max-width: 20rem; }
         section.about-us .organization .description {
           padding: 0;
-          margin: 0 auto 3.75rem;
+          margin: 0 auto 3rem;
           max-width: 440px; }
           section.about-us .organization .description p {
             font-size: 1rem;
@@ -1407,7 +1410,6 @@ footer {
       width: calc(100% - 20rem); } }
   @media screen and (max-width: 767px) {
     footer .content {
-      padding: 3rem 2rem;
       flex-direction: column; }
       footer .content .logo-wrapper, footer .content .text-wrapper {
         width: 100%;
@@ -1423,6 +1425,6 @@ footer {
         line-height: 1.5rem; }
         footer .content .text-wrapper p .label {
           display: block;
-          margin: 3rem 0 0; } }
+          margin: 2rem 0 0; } }
 
 /*# sourceMappingURL=main.css.map */
