@@ -8,14 +8,14 @@ section.top-banner {
     display: flex;
     .logo {
       width: 520px;
-      img {
-        width: 100%;
-      }
     }
     .text-wrapper {
       width: calc(calc(100% - 520px) / 2);
       h2 {
-        padding: 6.5rem calc(calc(100% - 3.25rem) / 2) 0;
+        display: flex;
+        flex-direction: column;
+        padding: 6.5rem 0 0;
+        text-align: center;
         color: $dark-40;
       }
     }
@@ -23,9 +23,66 @@ section.top-banner {
   .arrow {
     width: 38.5px;
     display: block;
-    margin: 5rem auto 0;
+    margin: 6rem auto 0;
     cursor: pointer;
     animation: floating 1.5s ease infinite;
+  }
+
+  @include rwd($laptop) {
+    .content {
+      .logo {
+        width: 400px;
+      }
+      .text-wrapper {
+        width: calc(calc(100% - 400px) / 2);
+        h2 {
+          padding: 2.5rem 0 0;
+        }
+      }
+    }
+  }
+  @include rwd($mobile) {
+    padding: 2rem 0 0;
+    .content {
+      display: block;
+      position: relative;
+      padding: calc(45vh - 2rem) 0 0;
+      text-align: center;
+      .logo {
+        width: auto;
+        height: calc(45vh - 4rem);
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .text-wrapper {
+        display: inline-block;
+        vertical-align: top;
+        width: 15%;
+        height: calc(55vh - 5rem);
+        position: relative;
+        h2 {
+          max-height: 18rem;
+          width: 100%;
+          height: 100%;
+          padding: 0;
+          font-size: 2rem;
+          font-weight: 500;
+          line-height: 100%;
+          justify-content: space-between;
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+    .arrow {
+      width: initial;
+      height: 2rem;
+      margin: 3rem auto 0;
+    }
   }
 }
 
@@ -34,7 +91,7 @@ section.top-banner {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(10px);
+    transform: translateY(-10px);
   }
   100% {
     transform: translateY(0);
@@ -45,13 +102,39 @@ section.tickets {
   padding: 5rem 0;
   .left {
     h3 {
-      display: inline-block;
-      vertical-align: top;
+      max-width: 428px;
       padding: 2rem 0;
       margin: 8.25rem 0 3.5rem;
       border-top: dashed 1px $text-black;
       border-bottom: dashed 1px $text-black;
       letter-spacing: 0.45rem;
+    }
+    p {
+      max-width: 428px;
+    }
+
+    @include rwd($laptop) {
+      margin: 0 0 20rem;
+      h3 {
+        margin: 3.5rem auto;
+        text-align: center;
+      }
+      p {
+        margin: 0 auto;
+      }
+    }
+    @include rwd($mobile) {
+      h3 {
+        max-width: 300px;
+        font-size: 1.875rem;
+        line-height: 2.5rem;
+        letter-spacing: 0.28rem;
+      }
+      p {
+        max-width: 300px;
+        font-size: 1rem;
+        line-height: 1.5rem;
+      }
     }
   }
   .right {
@@ -70,9 +153,9 @@ section.tickets {
         .content {
           position: absolute;
           left: 50%;
-          top: 30%;
+          top: 53%;
           width: 70%;
-          transform: translateX(-50%);
+          transform: translate(-50%, -50%);
           .line {
             display: flex;
             margin: 2rem 0 0;
@@ -121,6 +204,79 @@ section.tickets {
         }
       }
     }
+
+    @include rwd($mobile) {
+      h3 {
+        font-size: 1.875rem;
+        line-height: 2.5rem;
+      }
+      .slider-wrapper {
+        .ticket-wrapper {
+          margin: 0 0 3rem;
+          .content {
+            .line {
+              .label {
+                font-size: 1.5rem;
+                line-height: 1.7rem;
+              }
+              .text {
+                font-size: 1rem;
+                line-height: 1.7rem;
+              }
+            }
+          }
+        }
+        .buttons-wrapper {
+          .button {
+            width: 4.25rem;
+            height: 2rem;
+            p {
+              font-size: 1rem;
+              line-height: 2rem;
+            }
+          }
+        }
+      }
+    }
+    @include rwd($mobile-big) {
+      .slider-wrapper {
+        .ticket-wrapper {
+          .content {
+            .line {
+              margin: 1.2rem 0 0;
+              .label {
+                font-size: 1rem;
+                line-height: 1.5rem;
+              }
+              .text {
+                font-size: 1rem;
+                line-height: 1.5rem;
+              }
+            }
+          }
+        }
+      }
+    }
+    @include rwd($mobile-small) {
+      .slider-wrapper {
+        .ticket-wrapper {
+          .content {
+            width: 80%;
+            .line {
+              margin: 0.8rem 0 0;
+              .label {
+                font-size: 1rem;
+                line-height: 1.2rem;
+              }
+              .text {
+                font-size: 1rem;
+                line-height: 1.2rem;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -132,7 +288,7 @@ section.call-to-action {
       position: absolute;
       display: block;
       left: 50%;
-      bottom: 4.7rem;
+      bottom: 17.85%;
       transform: translateX(-50%);
       width: 17.4%;
       svg {
@@ -163,6 +319,23 @@ section.call-to-action {
             transition: 0.2s ease;
           }
         }
+      }
+    }
+  }
+  @include rwd($laptop) {
+    padding: 14rem 0;
+    .fence-wrapper {
+      height: 27.5rem;
+      img.fence {
+        height: 100%;
+        width: auto;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+      }
+      .door-wrapper {
+        width: 245.5px;
       }
     }
   }
@@ -216,6 +389,63 @@ section.about-us {
       }
     }
   }
+  @include rwd($mobile) {
+    padding: 5rem 0 0;
+    h3 {
+      text-align: center;
+      margin: 0 0 9rem;
+      font-size: 1.875rem;
+      line-height: 2.5rem;
+    }
+    .organization {
+      margin: 0 0 18rem;
+      .slogan-wrapper, .logo-wrapper, .description, .social-icons {
+        display: block;
+        width: 100%;
+      }
+      .slogan-wrapper {
+        text-align: center;
+        margin: 0 0 3rem;
+        p {
+          display: inline-block;
+          vertical-align: top;
+          width: initial;
+          font-size: 1rem;
+          line-height: 1.5rem;
+          letter-spacing: 2.1px
+        }
+      }
+      .logo-wrapper {
+        padding: 0;
+        margin: 0 0 2.75rem;
+        text-align: center;
+        img {
+          max-height: initial;
+          max-width: 20rem;
+        }
+      }
+      .description {
+        padding: 0;
+        margin: 0 auto 3.75rem;
+        max-width: 440px;
+        p {
+          font-size: 1rem;
+          line-height: 1.5rem;
+        }
+      }
+      .social-icons {
+        text-align: center;
+        padding: 0;
+        .social-icon {
+          width: 3rem;
+          margin: 0 2.25rem 0 0;
+          &:last-child {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
 }
 
 footer {
@@ -248,6 +478,43 @@ footer {
         color: $white;
         .label {
           color: $brown;
+        }
+      }
+    }
+  }
+  @include rwd($laptop) {
+    .content {
+      .logo-wrapper {
+        width: 20rem;
+      }
+      .text-wrapper {
+        width: calc(100% - 20rem);
+      }
+    }
+  }
+  @include rwd($mobile) {
+    .content {
+      padding: 3rem 2rem;
+      flex-direction: column;
+      .logo-wrapper, .text-wrapper {
+        width: 100%;
+        height: auto;
+        img {
+          max-width: 9.5rem;
+        }
+      }
+      .text-wrapper {
+        p {
+          text-align: center;
+          position: relative;
+          top: 0;
+          transform: none;
+          font-size: 1rem;
+          line-height: 1.5rem;
+          .label {
+            display: block;
+            margin: 3rem 0 0;
+          }
         }
       }
     }
