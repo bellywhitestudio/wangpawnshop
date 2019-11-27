@@ -1243,10 +1243,10 @@ section.tickets {
       section.tickets .right .slider-wrapper .ticket-wrapper .content .line {
         margin: 0.8rem 0 0; }
         section.tickets .right .slider-wrapper .ticket-wrapper .content .line .label {
-          font-size: 1rem;
+          font-size: 0.8rem;
           line-height: 1.2rem; }
         section.tickets .right .slider-wrapper .ticket-wrapper .content .line .text {
-          font-size: 1rem;
+          font-size: 0.8rem;
           line-height: 1.2rem; } }
 
 section.call-to-action {
