@@ -4,7 +4,7 @@ window.addEventListener('load', function () {
         if(section_tickets) page_smoothly_scroll_to(section_tickets.offsetTop, 1000);
     });
 
-    axios.get('https://api.airtable.com/v0/applgpGFRXcIF7ORT/Data?api_key=keylmELBoZbgflH0P&fields%5B%5D=Name&fields%5B%5D=Dropped+Object&fields%5B%5D=Exchange+Object&fields%5B%5D=Reason&maxRecords=20')
+    axios.get('https://api.airtable.com/v0/applgpGFRXcIF7ORT/Data?api_key=keylmELBoZbgflH0P&fields%5B%5D=Name&fields%5B%5D=Dropped+Object&fields%5B%5D=Exchange+Object&fields%5B%5D=Reason&maxRecords=20&filterByFormula=NOT(Hidden)')
         .then((response) => {
             const tickets = response.data.records;
             refresh_tickets(tickets);
