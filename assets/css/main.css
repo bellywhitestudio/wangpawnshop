@@ -1292,7 +1292,7 @@ section.call-to-action {
         transition: 0.2s ease; }
   @media screen and (max-width: 1200px) {
     section.call-to-action {
-      padding: 14rem 0; }
+      padding: 10rem 0; }
       section.call-to-action .fence-wrapper {
         height: 27.5rem; }
         section.call-to-action .fence-wrapper img.fence {
@@ -1412,13 +1412,13 @@ footer {
     background-color: #1a403d;
     display: flex; }
     footer .content .logo-wrapper {
-      width: 30rem; }
+      width: 23rem; }
       footer .content .logo-wrapper img {
         max-width: 12.5rem;
         display: block;
         margin: 0 auto; }
     footer .content .text-wrapper {
-      width: calc(100% - 30rem);
+      width: calc(100% - 23rem);
       position: relative; }
       footer .content .text-wrapper p {
         position: absolute;
@@ -1433,7 +1433,9 @@ footer {
     footer .content .logo-wrapper {
       width: 20rem; }
     footer .content .text-wrapper {
-      width: calc(100% - 20rem); } }
+      width: calc(100% - 20rem); }
+      footer .content .text-wrapper p {
+        font-size: 1.1rem; } }
   @media screen and (max-width: 767px) {
     footer .content {
       flex-direction: column; }
@@ -1449,8 +1451,9 @@ footer {
         transform: none;
         font-size: 1rem;
         line-height: 1.5rem; }
+        footer .content .text-wrapper p span {
+          display: block; }
         footer .content .text-wrapper p .label {
-          display: block;
           margin: 2rem 0 0; } }
 
 /*# sourceMappingURL=main.css.map */

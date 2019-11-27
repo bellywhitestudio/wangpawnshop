@@ -341,7 +341,7 @@ section.call-to-action {
     }
   }
   @include rwd($laptop) {
-    padding: 14rem 0;
+    padding: 10rem 0;
     .fence-wrapper {
       height: 27.5rem;
       img.fence {
@@ -502,7 +502,7 @@ footer {
     background-color: $dark-green;
     display: flex;
     .logo-wrapper {
-      width: 30rem;
+      width: 23rem;
       img {
         max-width: 12.5rem;
         display: block;
@@ -510,7 +510,7 @@ footer {
       }
     }
     .text-wrapper {
-      width: calc(100% - 30rem);
+      width: calc(100% - 23rem);
       position: relative;
       p {
         position: absolute;
@@ -532,6 +532,10 @@ footer {
       }
       .text-wrapper {
         width: calc(100% - 20rem);
+        p {
+          font-size: 1.1rem;
+          //line-height: 1.5rem;
+        }
       }
     }
   }
@@ -553,8 +557,10 @@ footer {
           transform: none;
           font-size: 1rem;
           line-height: 1.5rem;
-          .label {
+          span {
             display: block;
+          }
+          .label {
             margin: 2rem 0 0;
           }
         }
