@@ -1166,7 +1166,16 @@ section.tickets {
     max-width: 41rem; }
     section.tickets .right .slider-wrapper .ticket-wrapper {
       position: relative;
-      margin: 0 0 3.375rem; }
+      margin: 0 0 3.375rem;
+      z-index: 1; }
+      section.tickets .right .slider-wrapper .ticket-wrapper .shadow {
+        position: absolute;
+        left: 0;
+        bottom: -3rem;
+        width: 100%;
+        height: auto;
+        display: block;
+        z-index: -1; }
       section.tickets .right .slider-wrapper .ticket-wrapper .content {
         position: absolute;
         left: 50%;
@@ -1254,6 +1263,8 @@ section.call-to-action {
   padding: 7rem 0; }
   section.call-to-action .fence-wrapper {
     position: relative; }
+    section.call-to-action .fence-wrapper img.fence.mb {
+      display: none; }
     section.call-to-action .fence-wrapper .door-wrapper {
       position: absolute;
       display: block;
@@ -1293,6 +1304,21 @@ section.call-to-action {
           transform: translateX(-50%); }
         section.call-to-action .fence-wrapper .door-wrapper {
           width: 245.5px; } }
+  @media screen and (max-width: 767px) {
+    section.call-to-action .fence-wrapper {
+      height: 27.5rem; }
+      section.call-to-action .fence-wrapper img.fence.pc {
+        display: none; }
+      section.call-to-action .fence-wrapper img.fence.mb {
+        display: block; }
+      section.call-to-action .fence-wrapper .door-wrapper {
+        width: 176.5px;
+        left: calc(50% - 0.5px);
+        bottom: 23.85%; }
+        section.call-to-action .fence-wrapper .door-wrapper .text h2 {
+          font-size: 2.5rem;
+          line-height: 3.5rem;
+          letter-spacing: 0.4rem; } }
 
 section.about-us {
   padding: 5rem 0; }

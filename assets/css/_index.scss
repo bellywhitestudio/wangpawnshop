@@ -155,6 +155,16 @@ section.tickets {
       .ticket-wrapper {
         position: relative;
         margin: 0 0 3.375rem;
+        z-index: 1;
+        .shadow {
+          position: absolute;
+          left: 0;
+          bottom: -3rem;
+          width: 100%;
+          height: auto;
+          display: block;
+          z-index: -1;
+        }
         .content {
           position: absolute;
           left: 50%;
@@ -289,6 +299,9 @@ section.call-to-action {
   padding: 7rem 0;
   .fence-wrapper {
     position: relative;
+    img.fence.mb {
+      display: none;
+    }
     .door-wrapper {
       position: absolute;
       display: block;
@@ -341,6 +354,31 @@ section.call-to-action {
       }
       .door-wrapper {
         width: 245.5px;
+      }
+    }
+  }
+  @include rwd($mobile) {
+    .fence-wrapper {
+      height: 27.5rem;
+      img.fence {
+        &.pc {
+          display: none;
+        }
+        &.mb {
+          display: block;
+        }
+      }
+      .door-wrapper {
+        width: 176.5px;
+        left: calc(50% - 0.5px);
+        bottom: 23.85%;
+        .text {
+          h2 {
+            font-size: 2.5rem;
+            line-height: 3.5rem;
+            letter-spacing: 0.4rem;
+          }
+        }
       }
     }
   }
