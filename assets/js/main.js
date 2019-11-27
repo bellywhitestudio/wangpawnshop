@@ -55,7 +55,7 @@ function refresh_tickets(tickets) {
 
     let glide = new Glide('#tickets-slider', {
         perView: 1,
-        autoplay: 3000,
+        autoplay: 5000,
         rewind: true,
         hoverpause: false,
         gap: 40,
