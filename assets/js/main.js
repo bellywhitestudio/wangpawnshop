@@ -1,20 +1,55 @@
+let tickets = [];
+const airtable_api_url = 'https://api.airtable.com/v0/applgpGFRXcIF7ORT/Data?api_key=keylmELBoZbgflH0P&fields%5B%5D=Name&fields%5B%5D=Dropped+Object&fields%5B%5D=Exchange+Object&fields%5B%5D=Reason&maxRecords=20&filterByFormula=NOT(Hidden)&sort%5B0%5D%5Bfield%5D=Created+time&sort%5B0%5D%5Bdirection%5D=desc';
+let glide = {};
+
 window.addEventListener('load', function () {
     document.querySelector('#button-scroll-to-tickets').addEventListener('click', function () {
         const section_tickets = document.querySelector('section.tickets');
         if(section_tickets) page_smoothly_scroll_to(section_tickets.offsetTop, 1000);
     });
 
-    axios.get('https://api.airtable.com/v0/applgpGFRXcIF7ORT/Data?api_key=keylmELBoZbgflH0P&fields%5B%5D=Name&fields%5B%5D=Dropped+Object&fields%5B%5D=Exchange+Object&fields%5B%5D=Reason&maxRecords=20&filterByFormula=NOT(Hidden)')
+    axios.get(airtable_api_url)
         .then((response) => {
-            const tickets = response.data.records;
-            refresh_tickets(tickets);
+            tickets = response.data.records;
+            refresh_tickets();
         });
 
+    setInterval(() => {
+        console.log('let\'s check!');
+        if(document.hasFocus()) {
+            console.log('has focus');
+            axios.get(airtable_api_url)
+                .then((response) => {
+                    let should_update = false;
+                    for(let i=0; i<tickets.length; i++) {
+                        if(response.data.records[i].id !== tickets[i].id) {
+                            should_update = true;
+                            break;
+                        }
+                    }
 
+                    if(should_update) {
+                        console.log('refresh data');
+                        tickets = response.data.records;
+                        glide.destroy();
+                        refresh_tickets();
+                    }
+                })
+                .catch(() => {
+                    console.log('error');
+                })
+                .then(() => {
+                    console.log('************get api');
+                });
+        } else {
+            console.log('no focus');
+        }
+    }, 600000);
 }, false);
 
-function refresh_tickets(tickets) {
+function refresh_tickets() {
     let sliders = document.querySelector('#tickets-slider ul.glide__slides');
+    sliders.innerHTML = '';
     let lines = [{
         field_name: 'Dropped Object',
         label_name: "我願意拿出"
@@ -53,7 +88,7 @@ function refresh_tickets(tickets) {
         sliders.appendChild(slider);
     }
 
-    let glide = new Glide('#tickets-slider', {
+    glide = new Glide('#tickets-slider', {
         perView: 1,
         autoplay: 7000,
         rewind: true,
@@ -61,8 +96,7 @@ function refresh_tickets(tickets) {
         gap: 40,
         animationDuration: 1000,
         rewindDuration: 2000,
-    });
-    glide.mount();
+    }).mount();
 }
 
 function smoothly_scroll_to(element, to, duration) {
