@@ -14,37 +14,32 @@ window.addEventListener('load', function () {
             refresh_tickets();
         });
 
-    setInterval(() => {
-        console.log('let\'s check!');
-        if(document.hasFocus()) {
-            console.log('has focus');
-            axios.get(airtable_api_url)
-                .then((response) => {
-                    let should_update = false;
-                    for(let i=0; i<tickets.length; i++) {
-                        if(response.data.records[i].id !== tickets[i].id) {
-                            should_update = true;
-                            break;
+    if (getUrlParameter('autoRefresh') === 'true') {
+        setInterval(() => {
+            if (document.hasFocus()) {
+                axios.get(airtable_api_url)
+                    .then((response) => {
+                        let should_update = false;
+                        for (let i = 0; i < tickets.length; i++) {
+                            if (response.data.records[i].id !== tickets[i].id) {
+                                should_update = true;
+                                break;
+                            }
                         }
-                    }
 
-                    if(should_update) {
-                        console.log('refresh data');
-                        tickets = response.data.records;
-                        glide.destroy();
-                        refresh_tickets();
-                    }
-                })
-                .catch(() => {
-                    console.log('error');
-                })
-                .then(() => {
-                    console.log('************get api');
-                });
-        } else {
-            console.log('no focus');
-        }
-    }, 600000);
+                        if (should_update) {
+                            console.log('refresh data');
+                            tickets = response.data.records;
+                            glide.destroy();
+                            refresh_tickets();
+                        }
+                    })
+                    .catch(() => {
+                        console.log('error');
+                    });
+            }
+        }, 300000);
+    }
 }, false);
 
 function refresh_tickets() {
@@ -132,4 +127,11 @@ Math.easeInOutQuad = function (t, b, c, d) {
 function page_smoothly_scroll_to(to, duration) {
     smoothly_scroll_to(document.body, to, duration);
     smoothly_scroll_to(document.documentElement, to, duration);
+};
+
+function getUrlParameter(name) {
+    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+    var results = regex.exec(location.search);
+    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
 };
