@@ -293,6 +293,17 @@ section.tickets {
 
 section.call-to-action {
   padding: 7rem 0;
+  .title {
+    text-align: center;
+    margin: 0 0 3rem;
+    @include rwd($mobile) {
+      margin: 0 0 2rem;
+      line-height: 2.5rem;
+      span {
+        display: block;
+      }
+    }
+  }
   .fence-wrapper {
     position: relative;
     img.fence.mb {

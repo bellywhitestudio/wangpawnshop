@@ -1257,6 +1257,15 @@ section.tickets {
 
 section.call-to-action {
   padding: 7rem 0; }
+  section.call-to-action .title {
+    text-align: center;
+    margin: 0 0 3rem; }
+    @media screen and (max-width: 767px) {
+      section.call-to-action .title {
+        margin: 0 0 2rem;
+        line-height: 2.5rem; }
+        section.call-to-action .title span {
+          display: block; } }
   section.call-to-action .fence-wrapper {
     position: relative; }
     section.call-to-action .fence-wrapper img.fence.mb {
