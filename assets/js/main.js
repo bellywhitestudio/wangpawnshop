@@ -54,11 +54,14 @@ function refresh_tickets(tickets) {
     }
 
     let glide = new Glide('#tickets-slider', {
-        type: 'carousel',
+        // type: 'carousel',
         perView: 1,
         autoplay: 3000,
         rewind: true,
-        hoverpause: true
+        hoverpause: true,
+        gap: 40,
+        animationDuration: 1000,
+        rewindDuration: 3000,
     });
     glide.mount();
 }
