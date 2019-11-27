@@ -1184,9 +1184,9 @@ section.tickets {
           white-space: nowrap;
           overflow: hidden; }
           section.tickets .right .slider-wrapper .ticket-wrapper .content .line .label {
-            font-size: 2rem;
+            font-size: 1.5rem;
+            line-height: 1.7rem;
             font-weight: 700;
-            line-height: 2rem;
             white-space: nowrap; }
           section.tickets .right .slider-wrapper .ticket-wrapper .content .line .text {
             text-overflow: ellipsis;
@@ -1195,10 +1195,10 @@ section.tickets {
             margin-left: 4px;
             border-bottom: solid 1px #4d4d4d;
             flex-grow: 1;
-            font-size: 1.5rem;
-            line-height: 2rem;
             text-align: center;
-            color: #aa8258; }
+            color: #aa8258;
+            font-size: 1.3rem;
+            line-height: 1.7rem; }
     section.tickets .right .slider-wrapper .buttons-wrapper {
       padding: 1rem 0 0;
       display: flex;
@@ -1222,12 +1222,6 @@ section.tickets {
       line-height: 2.5rem; }
     section.tickets .right .slider-wrapper .ticket-wrapper {
       margin: 0 0 3rem; }
-      section.tickets .right .slider-wrapper .ticket-wrapper .content .line .label {
-        font-size: 1.5rem;
-        line-height: 1.7rem; }
-      section.tickets .right .slider-wrapper .ticket-wrapper .content .line .text {
-        font-size: 1rem;
-        line-height: 1.7rem; }
     section.tickets .right .slider-wrapper .buttons-wrapper .button {
       width: 4.25rem;
       height: 2rem; }

@@ -173,9 +173,11 @@ section.tickets {
             white-space: nowrap;
             overflow: hidden;
             .label {
-              font-size: 2rem;
+              font-size: 1.5rem;
+              line-height: 1.7rem;
+              //font-size: 2rem;
+              //line-height: 2rem;
               font-weight: 700;
-              line-height: 2rem;
               white-space: nowrap;
             }
             .text {
@@ -185,10 +187,12 @@ section.tickets {
               margin-left: 4px;
               border-bottom: solid 1px $text-black;
               flex-grow: 1;
-              font-size: 1.5rem;
-              line-height: 2rem;
+              //font-size: 1.5rem;
+              //line-height: 2rem;
               text-align: center;
               color: $brown;
+              font-size: 1.3rem;
+              line-height: 1.7rem;
             }
           }
         }
@@ -227,12 +231,12 @@ section.tickets {
           .content {
             .line {
               .label {
-                font-size: 1.5rem;
-                line-height: 1.7rem;
+                //font-size: 1.5rem;
+                //line-height: 1.7rem;
               }
               .text {
-                font-size: 1rem;
-                line-height: 1.7rem;
+                //font-size: 1rem;
+                //line-height: 1.7rem;
               }
             }
           }
