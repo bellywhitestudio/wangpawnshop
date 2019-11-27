@@ -57,7 +57,7 @@ function refresh_tickets(tickets) {
         perView: 1,
         autoplay: 3000,
         rewind: true,
-        hoverpause: true,
+        hoverpause: false,
         gap: 40,
         animationDuration: 1000,
         rewindDuration: 2000,
