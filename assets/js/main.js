@@ -54,7 +54,6 @@ function refresh_tickets(tickets) {
     }
 
     let glide = new Glide('#tickets-slider', {
-        // type: 'carousel',
         perView: 1,
         autoplay: 3000,
         rewind: true,
