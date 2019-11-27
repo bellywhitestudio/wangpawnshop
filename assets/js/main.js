@@ -15,7 +15,7 @@ window.addEventListener('load', function () {
         });
 
     if (getUrlParameter('autoRefresh') === 'true') {
-        console.log('refresh');
+        console.log('mode on');
         setInterval(() => {
             if (document.hasFocus()) {
                 axios.get(airtable_api_url)
@@ -29,7 +29,7 @@ window.addEventListener('load', function () {
                         }
 
                         if (should_update) {
-                            console.log('refresh data');
+                            console.log('refresh');
                             tickets = response.data.records;
                             glide.destroy();
                             refresh_tickets();
@@ -39,8 +39,7 @@ window.addEventListener('load', function () {
                         console.log('error');
                     });
             }
-        }, 3000);
-        // }, 300000);
+        }, 60000); // 1 min 跑一循環
     }
 }, false);
 
