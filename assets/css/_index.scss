@@ -220,6 +220,15 @@ section.tickets {
       }
     }
 
+    @include rwd($laptop) {
+      .slider-wrapper {
+        .ticket-wrapper {
+          .content {
+            width: 80%;
+          }
+        }
+      }
+    }
     @include rwd($mobile) {
       h3 {
         font-size: 1.875rem;
@@ -276,7 +285,7 @@ section.tickets {
       .slider-wrapper {
         .ticket-wrapper {
           .content {
-            width: 80%;
+            width: 85%;
             .line {
               margin: 0.8rem 0 0;
               .label {
@@ -284,6 +293,7 @@ section.tickets {
                 line-height: 1.2rem;
               }
               .text {
+                margin-left: 1px;
                 font-size: 0.8rem;
                 line-height: 1.2rem;
               }

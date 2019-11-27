@@ -1216,6 +1216,9 @@ section.tickets {
         section.tickets .right .slider-wrapper .buttons-wrapper .button:hover {
           background-color: #aa8258;
           transition: 0.2s ease; }
+  @media screen and (max-width: 1200px) {
+    section.tickets .right .slider-wrapper .ticket-wrapper .content {
+      width: 80%; } }
   @media screen and (max-width: 767px) {
     section.tickets .right h3 {
       font-size: 1.875rem;
@@ -1239,13 +1242,14 @@ section.tickets {
         line-height: 1.5rem; } }
   @media screen and (max-width: 480px) {
     section.tickets .right .slider-wrapper .ticket-wrapper .content {
-      width: 80%; }
+      width: 85%; }
       section.tickets .right .slider-wrapper .ticket-wrapper .content .line {
         margin: 0.8rem 0 0; }
         section.tickets .right .slider-wrapper .ticket-wrapper .content .line .label {
           font-size: 0.8rem;
           line-height: 1.2rem; }
         section.tickets .right .slider-wrapper .ticket-wrapper .content .line .text {
+          margin-left: 1px;
           font-size: 0.8rem;
           line-height: 1.2rem; } }
 
