@@ -1052,7 +1052,8 @@ a:focus, button:focus, button.active:focus, .button:focus, .button.active:focus 
   overflow: hidden; }
 
 section.top-banner {
-  padding: 5rem 0; }
+  padding: 5rem 0;
+  user-select: none; }
   section.top-banner .content {
     display: flex; }
     section.top-banner .content .logo {
@@ -1168,14 +1169,8 @@ section.tickets {
       position: relative;
       margin: 0 0 3.375rem;
       z-index: 1; }
-      section.tickets .right .slider-wrapper .ticket-wrapper .shadow {
-        position: absolute;
-        left: 0;
-        bottom: -3rem;
-        width: 100%;
-        height: auto;
-        display: block;
-        z-index: -1; }
+      section.tickets .right .slider-wrapper .ticket-wrapper img {
+        box-shadow: 0 3rem 25px -25px #999999; }
       section.tickets .right .slider-wrapper .ticket-wrapper .content {
         position: absolute;
         left: 50%;
@@ -1213,7 +1208,8 @@ section.tickets {
         height: 3.125rem;
         text-align: center;
         background-color: #999999;
-        cursor: pointer; }
+        cursor: pointer;
+        user-select: none; }
         section.tickets .right .slider-wrapper .buttons-wrapper .button p {
           color: #ffffff;
           line-height: 3.125rem; }

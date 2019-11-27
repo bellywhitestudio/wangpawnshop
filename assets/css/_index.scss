@@ -5,6 +5,7 @@
 
 section.top-banner {
   padding: 5rem 0;
+  user-select: none;
   .content {
     display: flex;
     .logo {
@@ -156,14 +157,8 @@ section.tickets {
         position: relative;
         margin: 0 0 3.375rem;
         z-index: 1;
-        .shadow {
-          position: absolute;
-          left: 0;
-          bottom: -3rem;
-          width: 100%;
-          height: auto;
-          display: block;
-          z-index: -1;
+        img {
+          box-shadow: 0 3rem 25px -25px $dark-40;
         }
         .content {
           position: absolute;
@@ -208,6 +203,7 @@ section.tickets {
           text-align: center;
           background-color: $dark-40;
           cursor: pointer;
+          user-select: none;
           p {
             color: $white;
             line-height: 3.125rem;

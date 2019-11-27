@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0">
+    <link rel="stylesheet" href="./resource/glide/glide.css">
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="shortcut icon" href="./assets/img/favicon.png">
     <title>老王當鋪</title>
@@ -55,42 +56,21 @@
                         <div class="right">
                             <h3>當票集錦</h3>
                             <div class="slider-wrapper">
-                                <div class="ticket-wrapper">
-                                    <img src="./assets/img/ticket.svg" alt="">
-                                    <img class="shadow" src="./assets/img/ticket-shadow.svg" alt="">
-                                    <div class="content">
-                                        <div class="line"><span class="label">我願意拿出</span><span class="text" id="dropped"></span></div>
-                                        <div class="line"><span class="label">為了換得</span><span class="text" id="exchanged"></span></div>
-                                        <div class="line"><span class="label">因為</span><span class="text" id="reason"></span></div>
+                                <div class="glide" id="tickets-slider">
+                                    <div data-glide-el="track" class="glide__track">
+                                        <ul class="glide__slides"></ul>
+                                    </div>
+
+                                    <div data-glide-el="controls" class="buttons-wrapper">
+                                        <a data-glide-dir="<" class="button">
+                                            <p>上一張</p>
+                                        </a>
+                                        <a data-glide-dir=">" class="button">
+                                            <p>下一張</p>
+                                        </a>
                                     </div>
                                 </div>
-                                <div class="buttons-wrapper">
-                                    <a class="button" id="button-prev-ticket">
-                                        <p>上一張</p>
-                                    </a>
-                                    <!--<a class="button" href="">-->
-                                        <!--<p>抽一張</p>-->
-                                    <!--</a>-->
-                                    <a class="button" id="button-next-ticket">
-                                        <p>下一張</p>
-                                    </a>
-                                </div>
                             </div>
-
-                            <!--<div id="myCarousel" class="carousel slide" data-ride="carousel">-->
-                                <!--<div class="carousel-inner">-->
-                                <!--</div>-->
-
-                                <!--&lt;!&ndash; Left and right controls &ndash;&gt;-->
-                                <!--<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">-->
-                                    <!--<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>-->
-                                    <!--<span class="sr-only">Previous</span>-->
-                                <!--</a>-->
-                                <!--<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">-->
-                                    <!--<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>-->
-                                    <!--<span class="sr-only">Next</span>-->
-                                <!--</a>-->
-                            <!--</div>-->
                         </div>
                     </div>
                 </div>
@@ -177,6 +157,8 @@
     </footer>
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js'></script>
+    <!--<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>-->
+    <script  src="resource/glide/glide.js"></script>
     <!--<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>-->
     <script  src="assets/js/main.js"></script>
     <!--<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'></script>-->
