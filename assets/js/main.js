@@ -15,6 +15,7 @@ window.addEventListener('load', function () {
         });
 
     if (getUrlParameter('autoRefresh') === 'true') {
+        console.log('refresh');
         setInterval(() => {
             if (document.hasFocus()) {
                 axios.get(airtable_api_url)
