@@ -138,6 +138,5 @@ function getUrlParameter(name) {
 };
 
 function gaEvent(category, action, label) {
-    console.log('eer');
-    ga('send', 'event', category, action, label);
+    gtag('send', 'event', category, action, label);
 }
