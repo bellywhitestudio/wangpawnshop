@@ -139,10 +139,5 @@ function getUrlParameter(name) {
 
 function gaEvent(category, action, label) {
     console.log('eer');
-    ga('send', {
-        hitType: 'event',
-        eventCategory: category,
-        eventAction: action,
-        eventLabel: label
-    });
+    ga('send', 'event', category, action, label);
 }
