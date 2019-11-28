@@ -138,5 +138,8 @@ function getUrlParameter(name) {
 };
 
 function gaEvent(category, action, label) {
-    gtag('send', 'event', category, action, label);
+    gtag('event', action, {
+        'event_category' : category,
+        'event_label' : label
+    });
 }
