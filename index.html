@@ -42,7 +42,7 @@
                         <h2><span>典</span><span>當</span><span>並</span><span>非</span><span>兒</span><span>戲</span></h2>
                     </div>
                 </div>
-                <img class="arrow" src="./assets/img/arrows-down.svg" alt="" id="button-scroll-to-tickets">
+                <img class="arrow" src="./assets/img/arrows-down.svg" alt="" id="button-scroll-to-tickets" onclick="gaEvent('scroll down button clicked', 'click', 'top banner')">
             </section>
             <section class="tickets">
                 <div class="row">
@@ -72,10 +72,10 @@
                                     </div>
 
                                     <div data-glide-el="controls" class="buttons-wrapper">
-                                        <a data-glide-dir="<" class="button">
+                                        <a data-glide-dir="<" class="button" onclick="gaEvent('prev button clicked', 'click', 'tickets')">
                                             <p>上一張</p>
                                         </a>
-                                        <a data-glide-dir=">" class="button">
+                                        <a data-glide-dir=">" class="button" onclick="gaEvent('next button clicked', 'click', 'tickets')">
                                             <p>下一張</p>
                                         </a>
                                     </div>
@@ -114,13 +114,13 @@
                         <p>藉由書寫出發，引導人們自由無畏地對待真實感受，並結合跨領域的藝術工作坊，觸發人們突破「表達自己」的勇氣，相信只要把時間留給自己靜下來覺察：我們就在愛裡，從接受每刻的真實，到理解每人的狀態。</p>
                     </div>
                     <div class="social-icons">
-                        <a class="social-icon" target="_blank" href="https://www.facebook.com/datemyself107/">
+                        <a class="social-icon" target="_blank" href="https://www.facebook.com/datemyself107/" onclick="gaEvent('datemyself facebook clicked', 'click', 'organization intro')">
                             <img src="./assets/img/icon-facebook.svg" alt="">
                         </a>
-                        <a class="social-icon" target="_blank" href="https://www.instagram.com/datemyself107/">
+                        <a class="social-icon" target="_blank" href="https://www.instagram.com/datemyself107/" onclick="gaEvent('datemyself instagram clicked', 'click', 'organization intro')">
                             <img src="./assets/img/icon-instagram.svg" alt="">
                         </a>
-                        <a class="social-icon" target="_blank" href="https://medium.com/@datemyself107">
+                        <a class="social-icon" target="_blank" href="https://medium.com/@datemyself107" onclick="gaEvent('datemyself medium clicked', 'click', 'organization intro')">
                             <img src="./assets/img/icon-medium.svg" alt="">
                         </a>
                     </div>
@@ -134,13 +134,13 @@
                         <p>我們相信生活中無處不學習，逛展也是。我們特別喜歡將有點嚴肅生硬的議題，用幽默直接的手法做包裝，讓參與者沈浸其中成為展的一部分，親身感受和回應我們想傳達的那些重要的事。</p>
                     </div>
                     <div class="social-icons">
-                        <a class="social-icon" target="_blank" href="https://www.facebook.com/bellywhitestudio/">
+                        <a class="social-icon" target="_blank" href="https://www.facebook.com/bellywhitestudio/" onclick="gaEvent('bellywhitestudio facebook clicked', 'click', 'organization intro')">
                             <img src="./assets/img/icon-facebook.svg" alt="">
                         </a>
-                        <a class="social-icon" target="_blank" href="https://www.instagram.com/bellywhite_design/">
+                        <a class="social-icon" target="_blank" href="https://www.instagram.com/bellywhite_design/" onclick="gaEvent('bellywhitestudio instagram clicked', 'click', 'organization intro')">
                             <img src="./assets/img/icon-instagram.svg" alt="">
                         </a>
-                        <a class="social-icon" target="_blank" href="https://medium.com/@bellywhitestudio">
+                        <a class="social-icon" target="_blank" href="https://medium.com/@bellywhitestudio" onclick="gaEvent('bellywhitestudio medium clicked', 'click', 'organization intro')">
                             <img src="./assets/img/icon-medium.svg" alt="">
                         </a>
                     </div>
